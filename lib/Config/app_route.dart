@@ -1,3 +1,4 @@
+import 'package:estekhare/Features/beforeStart/view/screens/secend.dart';
 import 'package:estekhare/Features/beforeStart/view/screens/start.dart';
 import 'package:estekhare/Features/home/view/screen/home.dart';
 import 'package:estekhare/Features/home/view/screen/splash.dart';
@@ -8,7 +9,8 @@ class AppRoute {
     return {
       Splash.rn: (context) => const Splash(),
       HomePage.rn: (context) => const HomePage(),
-      StartPage.rn: (context) => const StartPage()
+      StartPage.rn: (context) => const StartPage(),
+      SecendPage.rn: (context) => const SecendPage(),
     };
   }
 }

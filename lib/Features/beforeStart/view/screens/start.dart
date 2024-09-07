@@ -1,4 +1,5 @@
 import 'package:estekhare/Core/utils/esay_size.dart';
+import 'package:estekhare/Features/beforeStart/view/screens/secend.dart';
 import 'package:estekhare/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
@@ -35,9 +36,25 @@ class StartPage extends StatelessWidget {
                 EsaySize.safeGap(EsaySize.height(context) / 3),
                 Shimmer.fromColors(
                   baseColor: Colors.white,
-                  highlightColor: Colors.yellow.shade300,
+                  highlightColor: Colors.green.shade400,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(
+                        PageRouteBuilder(
+                          transitionDuration: const Duration(milliseconds: 800),
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  const SecendPage(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            return FadeTransition(
+                              opacity: animation,
+                              child: child,
+                            );
+                          },
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                         fixedSize: Size(EsaySize.width(context) / 1.5, 42),
                         backgroundColor: Colors.transparent,
