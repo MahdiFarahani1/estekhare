@@ -1,3 +1,4 @@
+import 'package:estekhare/Features/beforeStart/view/screens/about_us.dart';
 import 'package:estekhare/Features/beforeStart/view/screens/secend.dart';
 import 'package:estekhare/Features/beforeStart/view/screens/start.dart';
 import 'package:estekhare/Features/home/view/screen/home.dart';
@@ -11,6 +12,7 @@ class AppRoute {
       HomePage.rn: (context) => const HomePage(),
       StartPage.rn: (context) => const StartPage(),
       SecendPage.rn: (context) => const SecendPage(),
+      AboutUs.rn: (context) => const AboutUs(),
     };
   }
 }

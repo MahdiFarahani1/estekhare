@@ -27,8 +27,8 @@ class _HomePageState extends State<HomePage> {
             height: EsaySize.height(context),
             decoration: const BoxDecoration(
               gradient: LinearGradient(colors: [
-                Color(0xffB81736),
-                Color(0xff281537),
+                Colors.white,
+                Color.fromARGB(255, 215, 215, 215),
               ]),
             ),
           ),
@@ -199,53 +199,36 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          Align(
-            alignment: Alignment.topRight,
+          SafeArea(
             child: Padding(
-              padding: const EdgeInsets.only(top: 35, right: 16),
-              child: PopupMenuButton<String>(
-                onSelected: (value) {
-                  switch (value) {
-                    case "0":
+              padding: const EdgeInsets.all(4.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                    onPressed: () {
                       Navigator.pushReplacementNamed(context, StartPage.rn);
-                      break;
-                    case "1":
+                    },
+                    icon: Icon(
+                      Icons.home,
+                      color: Colors.grey.shade800,
+                      size: 25,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {
                       Share.share(shareContent);
-                      break;
-                    default:
-                  }
-                },
-                itemBuilder: (BuildContext context) {
-                  return [
-                    PopupMenuItem(
-                      value: '0',
-                      child: Row(
-                        children: [
-                          const Icon(Icons.home),
-                          EsaySize.safeGap(6),
-                          const Text("بيت")
-                        ],
-                      ),
+                    },
+                    icon: Icon(
+                      Icons.share,
+                      color: Colors.grey.shade800,
+                      size: 25,
                     ),
-                    PopupMenuItem(
-                      value: '1',
-                      child: Row(
-                        children: [
-                          const Icon(Icons.share),
-                          EsaySize.safeGap(6),
-                          const Text("مشاركة")
-                        ],
-                      ),
-                    ),
-                  ];
-                },
-                child: const Icon(
-                  Icons.more_vert_sharp,
-                  color: Colors.white,
-                ),
+                  )
+                ],
               ),
             ),
-          ),
+          )
         ],
       ),
     );

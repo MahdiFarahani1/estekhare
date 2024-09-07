@@ -1,4 +1,6 @@
+import 'package:estekhare/Core/utils/esay_size.dart';
 import 'package:estekhare/Features/beforeStart/view/screens/start.dart';
+import 'package:estekhare/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {
@@ -23,9 +25,11 @@ class _SplashState extends State<Splash> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text("splash"),
+    return Scaffold(
+      body: SizedBox(
+        width: EsaySize.width(context),
+        height: EsaySize.height(context),
+        child: Assets.images.splash.image(fit: BoxFit.cover),
       ),
     );
   }

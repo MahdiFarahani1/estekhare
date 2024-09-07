@@ -22,12 +22,18 @@ class $AssetsDatabaseGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/about.png
+  AssetGenImage get about => const AssetGenImage('assets/images/about.png');
+
   /// File path: assets/images/book-Icon.png
   AssetGenImage get bookIcon =>
       const AssetGenImage('assets/images/book-Icon.png');
 
+  /// File path: assets/images/splash.jpg
+  AssetGenImage get splash => const AssetGenImage('assets/images/splash.jpg');
+
   /// List of all assets
-  List<AssetGenImage> get values => [bookIcon];
+  List<AssetGenImage> get values => [about, bookIcon, splash];
 }
 
 class Assets {
