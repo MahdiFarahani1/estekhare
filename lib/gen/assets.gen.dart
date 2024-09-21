@@ -25,15 +25,26 @@ class $AssetsImagesGen {
   /// File path: assets/images/about.png
   AssetGenImage get about => const AssetGenImage('assets/images/about.png');
 
+  /// File path: assets/images/background.png
+  AssetGenImage get background =>
+      const AssetGenImage('assets/images/background.png');
+
   /// File path: assets/images/book-Icon.png
   AssetGenImage get bookIcon =>
       const AssetGenImage('assets/images/book-Icon.png');
+
+  /// File path: assets/images/book.png
+  AssetGenImage get book => const AssetGenImage('assets/images/book.png');
+
+  /// File path: assets/images/shrine.png
+  AssetGenImage get shrine => const AssetGenImage('assets/images/shrine.png');
 
   /// File path: assets/images/splash.jpg
   AssetGenImage get splash => const AssetGenImage('assets/images/splash.jpg');
 
   /// List of all assets
-  List<AssetGenImage> get values => [about, bookIcon, splash];
+  List<AssetGenImage> get values =>
+      [about, background, bookIcon, book, shrine, splash];
 }
 
 class Assets {
