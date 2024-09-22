@@ -58,13 +58,14 @@ class SecendPage extends StatelessWidget {
                       image: DecorationImage(
                           image: AssetImage(Assets.images.shrine.path),
                           fit: BoxFit.contain)),
-                  child: const Padding(
-                    padding: EdgeInsets.only(left: 60, right: 60, top: 145),
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(left: 60, right: 60, top: 145),
                     child: SingleChildScrollView(
                       child: Text(
                         "اللَّهُمَّ إنِّي أَسْتَخِيرُكَ بِعِلْمِكَ ، وَأَسْتَقْدِرُكَ بِقُدْرَتِكَ، وَأَسْأَلُكَ مِنْ فَضْلِكَ الْعَظِيمِ فَإِنَّكَ تَقْدِرُ وَلا أَقْدِرُ، وَتَعْلَمُ وَلا أَعْلَمُ، وَأَنْتَ عَلامُ الْغُيُوبِ، اللَّهُمَّ إنْ كُنْتَ تَعْلَمُ أَنَّ هَذَا الأَمْرَ (هنا تسمي حاجتك) خَيْرٌ لِي فِي دِينِي وَمَعَاشِي وَعَاقِبَةِ أَمْرِي وعَاجِلهِ وَآجِلِه، فَاقْدُرْهُ لِي وَيَسِّرْهُ لِي ثُمَّ بَارِكْ لِي فِيهِ، وَإِنْ كُنْتَ تَعْلَمُ أَنَّ هَذَا الأَمْرَ (هنا تسمي حاجتك) شَرٌّ لِي فِي دِينِي وَمَعَاشِي وَعَاقِبَةِ أَمْرِي وعَاجِلِه وَآجِلِهِ، فَاصْرِفْهُ عَنِّي وَاصْرِفْنِي عَنْهُ وَاقْدُرْ لِي الْخَيْرَ حَيْثُ كَانَ ثُمَّ ارْضِنِي بِه.",
                         style: TextStyle(
-                          color: Colors.green,
+                          color: ColorApp.baseBackgroundColor,
                           fontSize: 18,
                         ),
                         textAlign: TextAlign.justify,
@@ -95,7 +96,8 @@ class SecendPage extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   fixedSize: Size(EsaySize.width(context) / 1.5, 42),
                   backgroundColor: ColorApp.baseButtonColor,
-                  elevation: 4,
+                  shadowColor: ColorApp.baseButtonColor,
+                  elevation: 6,
                   shape: ContinuousRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                     side: const BorderSide(

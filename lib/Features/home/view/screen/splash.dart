@@ -26,10 +26,12 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SizedBox(
-        width: EsaySize.width(context),
-        height: EsaySize.height(context),
-        child: Assets.images.splash.image(fit: BoxFit.cover),
+      body: SafeArea(
+        child: SizedBox(
+          width: EsaySize.width(context),
+          height: EsaySize.height(context),
+          child: Assets.images.splash.image(fit: BoxFit.fill),
+        ),
       ),
     );
   }

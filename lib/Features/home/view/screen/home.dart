@@ -105,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                                     randomData['ayaa'],
                                     style: TextStyle(
                                       fontSize: 16,
-                                      color: Colors.green.shade400,
+                                      color: ColorApp.baseBackgroundColor,
                                     ),
                                     textAlign: TextAlign.justify,
                                   ),
@@ -131,7 +131,28 @@ class _HomePageState extends State<HomePage> {
                                   color: Color(0xffB81736),
                                 ),
                               ),
-                            )
+                            ),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            btn(
+                              onPressed: () {
+                                Share.share(shareContent);
+                              },
+                              icon: Icons.share,
+                            ),
+                            EsaySize.gap(20),
+                            btn(
+                              onPressed: () {
+                                Navigator.pushReplacementNamed(
+                                    context, StartPage.rn);
+                              },
+                              icon: Icons.home,
+                            ),
                           ],
                         ),
                       ),

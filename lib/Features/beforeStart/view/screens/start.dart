@@ -69,7 +69,8 @@ class StartPage extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           fixedSize: Size(EsaySize.width(context) / 1.5, 42),
                           backgroundColor: ColorApp.baseButtonColor,
-                          elevation: 4,
+                          elevation: 6,
+                          shadowColor: ColorApp.baseButtonColor,
                           shape: ContinuousRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                             side: const BorderSide(
